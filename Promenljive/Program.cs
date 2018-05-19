@@ -2,9 +2,9 @@
 
 namespace Promenljive
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             int starost = 16;
             string ime = "Djordje";
@@ -21,14 +21,6 @@ namespace Promenljive
             punoletan = true;
 
             Console.WriteLine("Dve godine kasnije, " + ime + " ima " + starost + " godina i on je sada punoletan");
-            Console.WriteLine("Punoletan: " + punoletan);
-            Console.ReadLine();*/
-
-            var starost = 14;
-            var ime = "Marko";
-            var punoletan = false;
-
-            Console.WriteLine(ime + " ima " + starost + " godina.");
             Console.WriteLine("Punoletan: " + punoletan);
             Console.ReadLine();
         }

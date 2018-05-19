@@ -2,7 +2,7 @@
 
 namespace Events
 {
-    class Video
+    internal class Video
     {
         public event EventHandler<VideoEventArgs> ImeSePromenilo;
 
@@ -29,7 +29,7 @@ namespace Events
         }
     }
 
-    class VideoEventArgs : EventArgs
+    internal class VideoEventArgs : EventArgs
     {
         public string StaroIme { get; set; }
         public string NovoIme { get; set; }

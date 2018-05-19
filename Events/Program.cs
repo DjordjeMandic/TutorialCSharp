@@ -2,9 +2,9 @@
 
 namespace Events
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var video = new Video("nasVideo.mp4");
             video.ImeSePromenilo += Video_ImeSePromenilo;

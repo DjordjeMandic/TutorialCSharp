@@ -2,9 +2,9 @@
 
 namespace Generics
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var nasaStringLista = new NasaLista<string>(5);
             var nasaIntLista = new NasaLista<int>(5);
@@ -27,7 +27,6 @@ namespace Generics
 
             Console.WriteLine(nasaBoolLista.ProcitajVrednost(2));
             Console.WriteLine(nasaBoolLista.ProcitajVrednost(5));
-
 
             Console.WriteLine(nasaStringLista.ProcitajVrednost(4));
 

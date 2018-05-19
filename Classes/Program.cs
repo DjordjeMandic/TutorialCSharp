@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Classes
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var pas1 = new Pas("Cezar", 6, Zivotinja.Pol.Musko, Pas.Vrsta.sarplaninac);
             var pas2 = new Pas("Badi", 4, Zivotinja.Pol.Zensko, Pas.Vrsta.pitbul);
@@ -49,9 +45,11 @@ namespace Classes
                 case Pas.Vrsta.pitbul:
                     StaticClass.WL("Pas 2 je pit bul");
                     break;
+
                 case Pas.Vrsta.sarplaninac:
                     StaticClass.WL("Pas 2 je sar planinac");
                     break;
+
                 default:
                     StaticClass.WL("Pas 2 vrsta nepoznata");
                     break;
@@ -63,7 +61,6 @@ namespace Classes
             Console.ReadLine();
             macka.Starost = macka.Starost + 1;
             StaticClass.WL("Macka se zove " + macka.Ime + " i ima " + macka.Starost + " godina.");
-
 
             macka.haha();
             pas1.haha();

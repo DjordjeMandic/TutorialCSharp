@@ -6,10 +6,11 @@ using System.Threading;
 
 namespace ConsoleClass
 {
-    class Program
+    internal class Program
     {
-        static List<byte[]> list = new List<byte[]>();
-        static void Main(string[] args)
+        private static List<byte[]> list = new List<byte[]>();
+
+        private static void Main(string[] args)
         {
             Thread t = new Thread(new ThreadStart(test));
             Thread t1 = new Thread(new ThreadStart(test));
@@ -22,7 +23,7 @@ namespace ConsoleClass
             Console.ReadLine();
         }
 
-        static void test()
+        private static void test()
         {
             ConsumeCPU(0);
         }
@@ -35,7 +36,7 @@ namespace ConsoleClass
             watch.Start();
             while (true)
             {
-                // Make the loop go on for "percentage" milliseconds then sleep the 
+                // Make the loop go on for "percentage" milliseconds then sleep the
                 // remaining percentage milliseconds. So 40% utilization means work 40ms and sleep 60ms
                 if (watch.ElapsedMilliseconds > percentage)
                 {
@@ -46,7 +47,7 @@ namespace ConsoleClass
             }
         }
 
-        static void Epizoda6()
+        private static void Epizoda6()
         {
             for (int i = 0; i < 50; i++)
             {
@@ -57,12 +58,11 @@ namespace ConsoleClass
             Console.ReadLine();
         }
 
-        static void Epizoda5()
+        private static void Epizoda5()
         {
             Console.CancelKeyPress += new ConsoleCancelEventHandler(nasCancelEvent);
             while (true)
             {
-
             }
         }
 
@@ -72,7 +72,7 @@ namespace ConsoleClass
             args.Cancel = true;
         }
 
-        static void Epizoda4()
+        private static void Epizoda4()
         {
             Tetris();
             Console.ReadLine();
@@ -80,7 +80,7 @@ namespace ConsoleClass
             Console.ReadLine();
         }
 
-        static void Epizoda3()
+        private static void Epizoda3()
         {
             Console.InputEncoding = Encoding.Unicode;
             Console.OutputEncoding = Encoding.Unicode;
@@ -120,63 +120,80 @@ namespace ConsoleClass
             Console.ReadLine();
         }
 
-        static void Epizoda2()
+        private static void Epizoda2()
         {
             #region read
+
             /*int procitano;
             while ((procitano = Console.Read()) != 0)
             {
                 Console.WriteLine(procitano + " = " + Convert.ToChar(procitano));
             }*/
-            #endregion
+
+            #endregion read
+
             #region readkey
+
             /*switch (Console.ReadKey().Key)
             {
                 case ConsoleKey.Home:
                     Console.WriteLine("Pritisnuo si home");
                     break;
+
                 case ConsoleKey.End:
                     Console.WriteLine("Pritisnuo si end");
                     break;
+
                 case ConsoleKey.Insert:
                     Console.WriteLine("Pritisnuo si insert");
                     break;
+
                 case ConsoleKey.Delete:
                     Console.WriteLine("Pritisnuo si delete");
                     break;
+
                 case ConsoleKey.PageUp:
                     Console.WriteLine("Pritisnuo si pgup");
                     break;
+
                 case ConsoleKey.PageDown:
                     Console.WriteLine("Pritisnuo si pgdw");
                     break;
+
                 default:
                     Console.WriteLine("Pritisnuo si nesto drugo");
                     break;
             }*/
-            #endregion
+
+            #endregion readkey
+
             #region readline
+
             /*switch(Console.ReadLine())
             {
                 case "pgup":
                     Console.WriteLine("page up");
                     break;
+
                 case "pgdw":
                     Console.WriteLine("page down");
                     break;
+
                 default:
                     Console.WriteLine("Napisi pgup ili pgdw");
                     break;
             }*/
-            #endregion
+
+            #endregion readline
+
             int read = Console.Read(); // 49 || KeyCode
             ConsoleKey consoleKey = Console.ReadKey().Key; // Enum
             ConsoleKeyInfo consoleKeyInfo = Console.ReadKey(); // Struct
-            char readKeyChar = Console.ReadKey().KeyChar; // 'a' 
+            char readKeyChar = Console.ReadKey().KeyChar; // 'a'
             string readLine = Console.ReadLine(); // "abc"
         }
 
-        static void Epizoda1()
+        private static void Epizoda1()
         {
             //Console.WriteLine("1") = Console.Write("1") + Console.WriteLine()
 
@@ -187,7 +204,8 @@ namespace ConsoleClass
         }
 
         #region Melodije
-        static void Tetris()
+
+        private static void Tetris()
         {
             Console.Beep(658, 125);
             Console.Beep(1320, 500);
@@ -274,7 +292,7 @@ namespace ConsoleClass
             Thread.Sleep(500);
         }
 
-        static void SuperMario()
+        private static void SuperMario()
         {
             Console.Beep(659, 125);
             Console.Beep(659, 125);
@@ -455,6 +473,7 @@ namespace ConsoleClass
             Console.Beep(523, 125);
             Thread.Sleep(625);
         }
-        #endregion
+
+        #endregion Melodije
     }
 }

@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ArrayList
 {
-    class Program
+    internal class Program
     {
-        static int[] intarray = { 1, 2, 3, 4, 5 };
-        static string[] test = { "3", "2", "1" };
-        static List<string> stringList = new List<string>();
-        static List<bool> boolList = new List<bool>();
+        private static int[] intarray = { 1, 2, 3, 4, 5 };
+        private static string[] test = { "3", "2", "1" };
+        private static List<string> stringList = new List<string>();
+        private static List<bool> boolList = new List<bool>();
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine(intarray[0]);
             Console.WriteLine(intarray[1]);
@@ -42,7 +39,6 @@ namespace ArrayList
             {
                 Console.WriteLine(broj);
             }
-
 
             Console.ReadLine();
 

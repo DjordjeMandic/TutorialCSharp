@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TryCatch
 {
-    class Program
+    internal class Program
     {
-        static int[] brojevi = { 5, 0 };
+        private static int[] brojevi = { 5, 0 };
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             try
             {
@@ -33,7 +29,7 @@ namespace TryCatch
                 }
                 throw new Exception("Ovo je greska koju smo sami izazvali");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex);
                 Console.ReadLine();

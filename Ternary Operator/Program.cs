@@ -2,9 +2,9 @@
 
 namespace Ternary_Operator
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             int a = 8;
             int b = 5;

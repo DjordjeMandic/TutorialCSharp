@@ -3,6 +3,7 @@
     public class NasaLista<Tip>
     {
         private Tip[] array;
+
         public NasaLista(int velicina)
         {
             array = new Tip[velicina + 1];

@@ -3,9 +3,9 @@ using System.Threading;
 
 namespace ConsoleKalkulator
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             try
             {
@@ -19,15 +19,19 @@ namespace ConsoleKalkulator
                     case "+":
                         Sabiranje();
                         break;
+
                     case "-":
                         Oduzimanje();
                         break;
+
                     case "*":
                         Mnozenje();
                         break;
+
                     case "/":
                         Deljenje();
                         break;
+
                     default:
                         Environment.Exit(0);
                         break;
@@ -35,12 +39,11 @@ namespace ConsoleKalkulator
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine("Greska: " + ex.Message);
             }
         }
 
-        static void Sabiranje()
+        private static void Sabiranje()
         {
             Console.WriteLine("Odabrao si sabiranje, molimo unestie broj a");
             int brojA;
@@ -63,7 +66,7 @@ namespace ConsoleKalkulator
             Console.WriteLine("Resenje je: " + Kalkulator<int>.Saberi(brojA, brojB));
         }
 
-        static void Oduzimanje()
+        private static void Oduzimanje()
         {
             Console.WriteLine("Odabrao si oduzimanje, molimo unestie broj a");
             int brojA;
@@ -86,7 +89,7 @@ namespace ConsoleKalkulator
             Console.WriteLine("Resenje je: " + Kalkulator<int>.Oduzmi(brojA, brojB));
         }
 
-        static void Mnozenje()
+        private static void Mnozenje()
         {
             Console.WriteLine("Odabrao si mnozenje, molimo unestie broj a");
             double brojA;
@@ -109,7 +112,7 @@ namespace ConsoleKalkulator
             Console.WriteLine("Resenje je: " + Kalkulator<double>.Pomnozi(brojA, brojB));
         }
 
-        static void Deljenje()
+        private static void Deljenje()
         {
             Console.WriteLine("Odabrao si deljenje, molimo unestie broj a");
             decimal brojA;

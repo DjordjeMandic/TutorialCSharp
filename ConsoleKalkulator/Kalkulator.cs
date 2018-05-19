@@ -1,6 +1,6 @@
 ﻿namespace ConsoleKalkulator
 {
-    class Kalkulator<Tip>
+    internal class Kalkulator<Tip>
     {
         public static Tip Saberi(Tip a, Tip b)
         {

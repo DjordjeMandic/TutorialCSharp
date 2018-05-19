@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AkoIAkoNije
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var ime = "Petar";
             var starost = -5;
@@ -17,8 +13,6 @@ namespace AkoIAkoNije
             // vece jedanko: >=
             // manje i vece: < i >
             // jedanko: ==
-
-            
 
             if (starost == 0) // proveravamo da li ima 0 godina
             {
